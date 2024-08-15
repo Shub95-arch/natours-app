@@ -1,0 +1,47 @@
+extends base
+
+block head
+
+    link(rel='stylesheet' href='/css/style-err.css')
+    title Natours | #{title}
+
+block content
+    .moon
+    .crater.crater1
+    .crater.crater2
+    .crater.crater3
+    .star.star1
+    .star.star2
+    .star.star3
+    .star.star4
+    .star.star5
+    #errPage.error
+        .title=status
+        .subtitle=`${msg}...`
+        .decription It looks one of the developers fell asleep
+        a(href='/login')
+            button.button.button--active LOGIN
+        a(href='/')
+            button.button HOME
+    .astronaut
+        .backpack
+        .body
+        .body__chest
+        .arm-left1
+        .arm-left2
+        .arm-right1
+        .arm-right2
+        .arm-thumb-left
+        .arm-thumb-right
+        .leg-left
+        .leg-right
+        .foot-left
+        .foot-right
+        .wrist-left
+        .wrist-right
+        .cord
+            canvas#cord(height='500px' width='500px')
+        .head
+            canvas#visor(width='60px' height='60px')
+            .head-visor-flare1
+            .head-visor-flare2

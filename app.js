@@ -3,6 +3,7 @@ const path = require('path');
 const rateLimit = require('express-rate-limit');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 const helmet = require('helmet');
 
 const tourRouter = require('./routes/tourRoutes'); //Routes
@@ -73,7 +74,7 @@ app.use(
     ],
   }),
 );
-
+app.use(compression());
 app.use(morgran('dev')); //morgan middleware
 
 const limiter = rateLimit({
